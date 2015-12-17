@@ -1,6 +1,6 @@
 --[[
 Author:		Mat
-Version:	1.1 
+Version:	1.11 
 Date: 		2015-12-17
 
 This script let's you use simple mouse gestures for Windows 7 and above.
@@ -76,6 +76,7 @@ end
 
 function gestureReset()
 	pressTwoKeys("lalt","spacebar",20);
+	Sleep(20);
 	PressAndReleaseKey("w");
      if show_console_output then
 		OutputLogMessage("[RESET]\t[Position = %s, Movement= %s ]\n",pos_string,diff_string);
@@ -84,7 +85,9 @@ end
 
 function gestureMinimise()
 	pressTwoKeys("lalt","spacebar",20);
+	Sleep(20);
 	PressAndReleaseKey("n");
+	Sleep(20);
 	PressAndReleaseKey("enter"); -- workaround for Chrome
      if show_console_output then
      	OutputLogMessage("[MINIMISE]\t[Position = %s, Movement= %s ]\n",pos_string,diff_string);
